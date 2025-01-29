@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "arseitalic";
+    src: url(../font/Arsenal-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "arseregular";
+    src: url(../font/Arsenal-Regular.ttf) format("truetype");
+}
+
+
+$italic: "arseitalic";
+
+$regular: "arsregular";

@@ -1,0 +1,77 @@
+@use "../base/variables";
+
+header {
+    background: linear-gradient(16deg, #16161A 30%, #3e3164 70%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+
+    .flexhead {
+        padding: 250px;
+        .mainMess {
+            padding-bottom: 50px;
+            font-family: variables.$regular;
+            font-size: 20px;
+            .welcome {
+                padding-right: 120px;
+                .twof {
+                    font-family: variables.$italic;
+                    color: #7F5AF0;
+                    font-size: 45px;
+                    font-style: oblique;
+                }
+            }
+            .front {
+                padding-left: 120px;
+                font-family: variables.$italic;
+                font-size: 25px;
+                padding-bottom: 30px;
+            }
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .projectbutton {
+                    text-decoration: none;
+                    color: white;
+                    font-family: variables.$italic;
+                    background-color: #7F5AF0;
+                    border: #16161A;
+                    border-bottom-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    width: 100px;
+                }
+            }
+        }
+        .info {
+            .about {
+                font-family: variables.$italic;
+                h2 {
+                color: #7F5AF0;
+                font-size: 30px;
+            }
+            .infotxt {
+                margin: 20px 30vh;
+                font-size: 20px;
+                font-family: variables.$italic;
+            }
+            }
+        }
+        .exp {
+            margin-top: 50px;
+            h2 {
+                color: #7F5AF0;
+                font-size: 30px;
+                font-family: variables.$italic;
+            }
+            .infotxt {
+                margin: 20px 30vh;
+                font-size: 20px;
+                font-family: variables.$italic;
+            }
+        }
+    }
+
+}

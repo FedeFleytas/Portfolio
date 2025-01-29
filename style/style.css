@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "arseitalic";
+  src: url(../font/Arsenal-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "arseregular";
+  src: url(../font/Arsenal-Regular.ttf) format("truetype");
+}
+header {
+  background: linear-gradient(16deg, #16161A 30%, #3e3164 70%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+header .flexhead {
+  padding: 250px;
+}
+header .flexhead .mainMess {
+  padding-bottom: 50px;
+  font-family: "arsregular";
+  font-size: 20px;
+}
+header .flexhead .mainMess .welcome {
+  padding-right: 120px;
+}
+header .flexhead .mainMess .welcome .twof {
+  font-family: "arseitalic";
+  color: #7F5AF0;
+  font-size: 45px;
+  font-style: oblique;
+}
+header .flexhead .mainMess .front {
+  padding-left: 120px;
+  font-family: "arseitalic";
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+header .flexhead .mainMess .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .flexhead .mainMess .button .projectbutton {
+  text-decoration: none;
+  color: white;
+  font-family: "arseitalic";
+  background-color: #7F5AF0;
+  border: #16161A;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100px;
+}
+header .flexhead .info .about {
+  font-family: "arseitalic";
+}
+header .flexhead .info .about h2 {
+  color: #7F5AF0;
+  font-size: 30px;
+}
+header .flexhead .info .about .infotxt {
+  margin: 20px 30vh;
+  font-size: 20px;
+  font-family: "arseitalic";
+}
+header .flexhead .exp {
+  margin-top: 50px;
+}
+header .flexhead .exp h2 {
+  color: #7F5AF0;
+  font-size: 30px;
+  font-family: "arseitalic";
+}
+header .flexhead .exp .infotxt {
+  margin: 20px 30vh;
+  font-size: 20px;
+  font-family: "arseitalic";
+}
+
+* {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
