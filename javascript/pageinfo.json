@@ -4,20 +4,33 @@
         "name": "TECHFORGE",
         "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
         "imgPage": "image/techforge.png",
-        "url": "https://techforge.vercel.app/index.html"
+        "url": "https://techforge.vercel.app/index.html",
+        "lang": "image/htmllogo.png",
+        "lang2": "image/css-logo.png",
+        "lang3": "image/sasslogo.png"
     },
     {
         "id": 2,
-        "name": "TECHFORGE",
-        "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
-        "imgPage": "image/techforge.png",
-        "url": "https://techforge.vercel.app/index.html"
+        "name": "TECHFORGE V2",
+        "info": "Mi segunda pagina en mi curso de coderhouse en la que imprementamos el uso de JS para usar el carrito de compras",
+        "imgPage": "image/techforgev2.png",
+        "url": "https://fedefleytas.github.io/Proy-js/",
+        "lang": "image/htmllogo.png",
+        "lang2": "image/css-logo.png",
+        "lang3": "image/sasslogo.png",
+        "lang4": "image/js-logo.png"
     },
     {
-        "id": 2,
-        "name": "TECHFORGE",
-        "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
-        "imgPage": "image/techforge.png",
-        "url": "https://techforge.vercel.app/index.html"
+        "id": 3,
+        "name": "TECHNOW",
+        "info": "Pagina de mi tercer curso de coderhouse en la que agragamos el uso de api externa para cargar y enviar la compra con ids diferentes",
+        "imgPage": "image/technow.png",
+        "url": "https://entrega-react-nine.vercel.app",
+        "lang": "image/htmllogo.png",
+        "lang2": "image/css-logo.png",
+        "lang3": "image/sasslogo.png",
+        "lang4": "image/js-logo.png",
+        "lang5": "image/React.png"
+
     }
 ]

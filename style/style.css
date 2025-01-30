@@ -7,8 +7,8 @@
   src: url(../font/Arsenal-Regular.ttf) format("truetype");
 }
 header {
-  background: linear-gradient(16deg, #16161A 30%, #3e3164 70%);
-  box-shadow: 0px 0px 40px 40px #16161a;
+  background: linear-gradient(16deg, rgba(22, 22, 26, 0.3725490196) 35%, rgba(62, 49, 100, 0.6078431373) 55%);
+  box-shadow: 0px 0px 40px 40px rgba(22, 22, 26, 0.3725490196);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -16,7 +16,7 @@ header {
   color: white;
 }
 header .flexhead {
-  padding: 250px;
+  padding: 150px;
 }
 header .flexhead .mainMess {
   padding-bottom: 50px;
@@ -45,13 +45,18 @@ header .flexhead .mainMess .button {
 }
 header .flexhead .mainMess .button .projectbutton {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "arseitalic";
   background-color: #7F5AF0;
-  border: #16161A;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border: 1px solid #16161A;
+  border-radius: 5px;
   width: 100px;
+  transition: 3s;
+}
+header .flexhead .mainMess .button .projectbutton:hover {
+  background-color: #16161A;
+  border: 1px solid #7F5AF0;
+  color: #ffffff;
 }
 header .flexhead .info .about {
   font-family: "arseitalic";
@@ -95,24 +100,92 @@ html::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #7F5AF0;
+  background-color: #16161A;
+  margin-top: 100px;
+}
+footer .contact {
+  margin-top: 50px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: "tittle tittle tittle" "ig mia li" "mail mail mail";
+}
+footer .contact .cont {
+  grid-area: tittle;
+  font-family: "arseitalic";
+  font-size: 25px;
+}
+footer .contact .ig {
+  grid-area: ig;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+footer .contact .ig .imglogo {
+  height: 40px;
+  width: 40px;
+}
+footer .contact .link {
+  grid-area: li;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+footer .contact .link .imglogo {
+  height: 50px;
+  width: 50px;
+}
+footer .contact .mail {
+  grid-area: mail;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+footer .contact .mail .imglogo {
+  height: 50px;
+  width: 50px;
+}
+footer .contact .mia {
+  grid-area: mia;
+  height: 200px;
+  width: 200px;
+}
+
 main {
-  margin: 10px 250px;
+  margin: 10px 100px;
 }
 main .project {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 200px;
+  margin: 100px 200px 5px 200px;
 }
 main .project .separate {
-  border: 1px solid #7F5AF0;
-  margin-bottom: 40px;
-  width: 500px;
+  height: 4px;
+  border: none;
+  background-color: #7F5AF0;
+  box-shadow: 0 0 10px #9675fa;
+  width: 80%;
+  margin: 50px;
 }
 main .project h2 {
   font-size: 30px;
   font-family: "arseitalic";
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 main .project .pages {
   font-family: "arseitalic";
@@ -123,24 +196,26 @@ main .project .pages {
   flex-direction: column;
 }
 main .project .pages .page {
-  margin: 50px 0;
+  margin: 50px;
   display: grid;
-  grid-template-rows: 80px;
+  grid-template-rows: 50px 60px 80px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "titulo titulo foto" "desc desc foto";
+  grid-template-areas: "titulo titulo foto" "desc desc foto" "leng leng foto";
   font-family: "arseitalic";
 }
 main .project .pages .page:nth-child(even) {
-  grid-template-areas: "foto titulo titulo" "foto desc desc";
+  grid-template-areas: "foto titulo titulo" "foto desc desc" "foto leng leng";
 }
 main .project .pages .page:nth-child(even) .name {
   grid-area: titulo;
   text-align: right;
+  font-size: 25px;
 }
 main .project .pages .page:nth-child(even) .info {
   grid-area: desc;
   text-align: right;
-  margin: 0 0 0 150px;
+  margin: 0 0 0 250px;
+  font-size: 18px;
 }
 main .project .pages .page:nth-child(even) .urlimg {
   grid-area: foto;
@@ -148,16 +223,44 @@ main .project .pages .page:nth-child(even) .urlimg {
 main .project .pages .page:nth-child(even) .urlimg .img-page {
   width: 100%;
   height: auto;
+  border-radius: 5px;
   box-shadow: -6px 8px 4px #16161A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .project .pages .page:nth-child(even) .urlimg .img-page:hover {
+  transform: translateY(-10px) scale(1.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+main .project .pages .page:nth-child(even) .langcont {
+  display: flex;
+  grid-area: leng;
+  justify-content: right;
+  width: 200%;
+  height: 100%;
+  align-items: end;
+}
+main .project .pages .page:nth-child(even) .langcont .leng {
+  height: 40px;
+  width: 40px;
 }
 main .project .pages .page .name {
   grid-area: titulo;
   text-align: left;
+  font-size: 25px;
+}
+main .project .pages .page .name::after {
+  content: "--";
+  color: #7F5AF0;
+}
+main .project .pages .page .name::before {
+  content: "--";
+  color: #7F5AF0;
 }
 main .project .pages .page .info {
   grid-area: desc;
   text-align: left;
-  margin: 0 150px 0 0;
+  margin: 0 200px 0 0;
+  font-size: 18px;
 }
 main .project .pages .page .urlimg {
   grid-area: foto;
@@ -165,7 +268,68 @@ main .project .pages .page .urlimg {
 main .project .pages .page .urlimg .img-page {
   width: 100%;
   height: auto;
+  border-radius: 5px;
   box-shadow: 6px 8px 4px #16161A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .project .pages .page .urlimg .img-page:hover {
+  transform: translateY(-10px) scale(1.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+main .project .pages .page .langcont {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  grid-area: leng;
+  justify-content: left;
+  align-items: end;
+}
+main .project .pages .page .langcont .leng {
+  height: 40px;
+  width: 40px;
+}
+main .skillscont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 200px 50px 200px;
+}
+main .skillscont .separate {
+  height: 4px;
+  border: none;
+  background-color: #7F5AF0;
+  box-shadow: 0 0 10px #9675fa;
+  width: 80%;
+  margin: 50px;
+}
+main .skillscont .skills {
+  font-size: 30px;
+  font-family: "arseitalic";
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+main .skillscont .logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 70px;
+}
+main .skillscont .logos .skillcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+main .skillscont .logos .skillcont .imgskill {
+  height: 50px;
+  width: 50px;
+}
+main .skillscont .logos .skillcont p {
+  font-family: "arseitalic";
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

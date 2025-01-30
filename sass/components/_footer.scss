@@ -1,0 +1,67 @@
+@use "../base/variables";
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #7F5AF0;
+    background-color: #16161A;
+    margin-top: 100px;
+    .contact {
+        margin-top: 50px;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+        "tittle tittle tittle"
+        "ig mia li"
+        "mail mail mail";
+        .cont {
+            grid-area: tittle;
+            font-family: variables.$italic;
+            font-size: 25px;
+        }
+        .ig {
+            grid-area: ig;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            .imglogo {
+                height: 40px;
+                width: 40px;
+            }
+        }
+        .link {
+            grid-area: li;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 10px;
+            .imglogo {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .mail {
+            grid-area: mail;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            .imglogo {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .mia {
+            grid-area: mia;
+            height: 200px;
+            width: 200px;
+        }
+    };
+}

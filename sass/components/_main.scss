@@ -1,24 +1,29 @@
 @use "../base/variables";
 
 main {
-    margin: 10px 250px;
+    margin: 10px 100px;
     .project {
         
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 200px;
+        margin: 100px 200px 5px 200px;
 
         .separate{
-            border: 1px solid #7F5AF0;
-            margin-bottom: 40px;
-            width: 500px;
+            height: 4px;
+            border: none;
+            background-color: #7F5AF0;
+            box-shadow: 0 0 10px #9675fa;
+            width: 80%;
+            margin: 50px;
         }
 
         h2{
             font-size: 30px;
             font-family: variables.$italic;
+            color: #ffffff;
+            margin-bottom: 40px;
         }
 
         .pages {
@@ -29,56 +34,147 @@ main {
             justify-content: center;
             flex-direction: column;
             .page {
-                margin: 50px 0;
+                margin: 50px;
                 display: grid;
-                grid-template-rows: 80px;
+                grid-template-rows: 50px 60px 80px;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-areas: 
                 "titulo titulo foto"
-                "desc desc foto";
+                "desc desc foto"
+                "leng leng foto";
                 font-family: variables.$italic;
                 &:nth-child(even){
                     grid-template-areas: 
                     "foto titulo titulo"
-                    "foto desc desc";
+                    "foto desc desc"
+                    "foto leng leng";
                     .name {
                         grid-area: titulo;
                         text-align: right;
-                        
+                        font-size: 25px;
                     }
                     .info {
                         grid-area: desc;
                         text-align: right;
-                        margin: 0 0 0 150px;
-    
+                        margin: 0 0 0 250px;
+                        font-size: 18px;
                     }
                     .urlimg {
                         grid-area: foto;
                         .img-page {
                             width: 100%;
                             height: auto;
+                            border-radius: 5px;
                             box-shadow: -6px 8px 4px #16161A;
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            &:hover {
+                                transform: translateY(-10px) scale(1.4);
+                                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                            }
+                        }
+                    }   
+
+                    .langcont {
+                        display: flex;
+                        grid-area: leng;
+                        justify-content: right;
+                        width: 200%;
+                        height: 100%;
+                        align-items: end;
+                        .leng {
+                            height: 40px;
+                            width: 40px;
                         }
                     }
                 }
                 .name {
                     grid-area: titulo;
                     text-align: left;
-                    
+                    font-size: 25px;
+                    &::after {
+                        content: "--";
+                        color: #7F5AF0;
+                    }
+                    &::before {
+                        content: "--";
+                        color: #7F5AF0;
+                    }
                 }
                 .info {
                     grid-area: desc;
                     text-align: left;
-                    margin: 0 150px 0 0;
-
+                    margin: 0 200px 0 0;
+                    font-size: 18px;
                 }
                 .urlimg {
                     grid-area: foto;
                     .img-page {
                         width: 100%;
                         height: auto;
+                        border-radius: 5px;
                         box-shadow: 6px 8px 4px #16161A;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        &:hover {
+                            transform: translateY(-10px) scale(1.4);
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                        }
                     }
+                }
+                .langcont {
+                    display: flex;
+                    width: 200%;
+                    height: 100%;
+                    grid-area: leng;
+                    justify-content: left;
+                    align-items: end;
+                    .leng {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .skillscont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px 200px 50px 200px;
+        .separate{
+            height: 4px;
+            border: none;
+            background-color: #7F5AF0;
+            box-shadow: 0 0 10px #9675fa;
+            width: 80%;
+            margin: 50px;
+        }
+        .skills {
+            font-size: 30px;
+            font-family: variables.$italic;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 70px;
+            .skillcont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+
+                .imgskill {
+                    height: 50px;
+                    width: 50px;
+                }
+                p {
+                    font-family: variables.$italic;
+                    font-size: 20px;
                 }
             }
         }
