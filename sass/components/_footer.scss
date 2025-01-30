@@ -62,6 +62,11 @@ footer {
             grid-area: mia;
             height: 200px;
             width: 200px;
+            filter: drop-shadow(0px 0px 1.9px #ffffffab);
+            &:hover {
+                filter: drop-shadow(0px 0px 1.9px #7f5af0);
+            }
+
         }
     };
 }

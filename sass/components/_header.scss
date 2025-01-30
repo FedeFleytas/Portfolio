@@ -8,77 +8,158 @@ header {
     flex-direction: column;
     text-align: center;
     color: white;
-
     .flexhead {
-        padding: 150px;
-        .mainMess {
-            padding-bottom: 50px;
-            font-family: variables.$regular;
-            font-size: 20px;
-            .welcome {
-                padding-right: 120px;
-                .twof {
+        .navbar {
+            display: grid;
+            gap: 25%;
+            background-color: #16161a51;
+            margin: 0 50px;
+            border-radius: 20px;
+            height: 12vh;
+            position: relative;
+            top: 30px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "left right";
+            .leftcont{
+                display: flex;
+                flex-direction: row;
+                grid-area: left;
+                justify-content: left;
+                align-items: center;
+                margin: 0 40px;
+                .logocat {
+                    height: 70px;
+                    width: 70px;
+                }
+                .portfolio{
+                    font-size: 25px;
                     font-family: variables.$italic;
-                    color: #7F5AF0;
-                    font-size: 45px;
-                    font-style: oblique;
                 }
             }
-            .front {
-                padding-left: 120px;
-                font-family: variables.$italic;
-                font-size: 25px;
-                padding-bottom: 30px;
-            }
-            .button {
+            .rightcont{
                 display: flex;
-                justify-content: center;
+                flex-direction: row;
+                grid-area: right;
+                justify-content: right;
                 align-items: center;
-                .projectbutton {
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
-                    font-family: variables.$italic;
-                    background-color: #7F5AF0;
-                    border: 1px solid #16161A;
-                    border-radius: 5px;
-                    width: 100px;
-                    transition: 3s;
-                    &:hover {
-                        background-color: #16161A;
-                        border:1px solid #7F5AF0;
-                        color: #ffffff;
+                gap: 40px;
+                margin: 0px 40px;
+                .listacontent{
+                    display: flex;
+                    flex-direction: row;
+                    list-style: none;
+                    gap: 20px;
+                    
+                    .proy-li {
+                        .link-a  {
+                            color: #ffffff;
+                            text-decoration: none;
+                            font-family: variables.$italic;
+                            font-size: 20px;
+                            &:hover {
+                                filter: drop-shadow(0px 0px 1.9px #7f5af0);
+                            }
+                        }
+                    }
+                    .cont-li {
+                        .link-a {
+                            color: #ffffff;
+                            text-decoration: none;
+                            font-family: variables.$italic;
+                            font-size: 20px;
+                            &:hover {
+                                filter: drop-shadow(0px 0px 1.9px #7f5af0);
+                            }
+                        }
+                    }
+                    .skill-li {
+                        .link-a  {
+                            color: #ffffff;
+                            text-decoration: none;
+                            font-family: variables.$italic;
+                            font-size: 20px;
+                            &:hover {
+                                filter: drop-shadow(0px 0px 1.9px #7f5af0);
+                            }
+                        }
                     }
                 }
-            }
-        }
-        .info {
-            .about {
-                font-family: variables.$italic;
+                .linkgh {
+                    &:hover {
+                        filter: drop-shadow(0px 0px 1.9px #7f5af0);
+                    }
+                    .ghlogo {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
 
-                h2 {
-                color: #7F5AF0;
-                font-size: 30px;
-            }
-            .infotxt {
-                margin: 20px 30vh;
-                font-size: 20px;
-                font-family: variables.$italic;
-            }
             }
         }
-        .exp {
-            margin-top: 50px;
-            h2 {
-                color: #7F5AF0;
-                font-size: 30px;
-                font-family: variables.$italic;
-            }
-            .infotxt {
-                margin: 20px 30vh;
+
+        .headcontainer {
+            padding: 150px;
+            .mainMess {
+                padding-bottom: 50px;
+                font-family: variables.$regular;
                 font-size: 20px;
-                font-family: variables.$italic;
+                .welcome {
+                    padding-right: 120px;
+                    .twof {
+                        font-family: variables.$italic;
+                        color: #7F5AF0;
+                        font-size: 45px;
+                        font-style: oblique;
+                    }
+                }
+                .front {
+                    padding-left: 120px;
+                    font-family: variables.$italic;
+                    font-size: 25px;
+                    padding-bottom: 30px;
+                }
+            }
+            .info {
+                background-color: #00000028;
+                margin: 10px 300px 10px 300px;
+                padding: 10px 0;
+                border: 1px solid transparent;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(0deg, red, blue);
+                animation: borderMove 5s infinite linear;
+                .about {
+                    font-family: variables.$italic;
+                    h2 {
+                    color: #ffffff;
+                    font-size: 30px;
+                    &::after {
+                        content: "--";
+                        color: #7F5AF0;
+                    }
+                    &::before {
+                        content: "--";
+                        color: #7F5AF0;
+                    }
+                }
+                .infotxt {
+                    margin: 20px 10vh;
+                    font-size: 20px;
+                    font-family: variables.$italic;
+                    text-align: center;
+                }
+                }
             }
         }
     }
+}
 
+
+@keyframes borderMove {
+    0% { border-image-source: linear-gradient(0deg, #7F5AF0, #16161A); }
+    25% { border-image-source: linear-gradient(90deg, #7F5AF0, #16161A); }
+    50% { border-image-source: linear-gradient(180deg, #7F5AF0, #16161A); }
+    75% { border-image-source: linear-gradient(270deg, #7F5AF0, #16161A); }
+    100% { border-image-source: linear-gradient(360deg, #7F5AF0, #16161A); }
 }

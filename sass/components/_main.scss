@@ -56,8 +56,9 @@ main {
                     .info {
                         grid-area: desc;
                         text-align: right;
-                        margin: 0 0 0 250px;
+                        margin: 0 0 0 100px;
                         font-size: 18px;
+                        height: 100%;
                     }
                     .urlimg {
                         grid-area: foto;
@@ -68,8 +69,14 @@ main {
                             box-shadow: -6px 8px 4px #16161A;
                             transition: transform 0.3s ease, box-shadow 0.3s ease;
                             &:hover {
-                                transform: translateY(-10px) scale(1.4);
+                                transform: translateY(-10px) scale(1.6);
                                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                                border-bottom-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                                border: 0px solid transparent;
+                                border-image-slice: 1;
+                                border-image-source: linear-gradient(0deg, red, blue);
+                                animation: borderMove 5s infinite linear;
                             }
                         }
                     }   
@@ -103,20 +110,30 @@ main {
                 .info {
                     grid-area: desc;
                     text-align: left;
-                    margin: 0 200px 0 0;
+                    margin: 0 100px 0 0;
                     font-size: 18px;
                 }
                 .urlimg {
                     grid-area: foto;
+                    height: 80%;
                     .img-page {
                         width: 100%;
                         height: auto;
                         border-radius: 5px;
                         box-shadow: 6px 8px 4px #16161A;
-                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        border: 1px solid transparent;
+                        border-image-slice: 1;
+                        border-image-source: linear-gradient(0deg, red, blue);
+                        animation: borderMove 5s infinite linear;
                         &:hover {
-                            transform: translateY(-10px) scale(1.4);
+                            transform: translateY(-10px) scale(1.6);
                             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                            border-bottom-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            border: 0px solid transparent;
+                            border-image-slice: 1;
+                            border-image-source: linear-gradient(0deg, red, blue);
+                            animation: borderMove 5s infinite linear;
                         }
                     }
                 }
@@ -179,4 +196,12 @@ main {
             }
         }
     }
+}
+
+@keyframes borderMove {
+    0% { border-image-source: linear-gradient(0deg, #7F5AF0, #16161A); }
+    25% { border-image-source: linear-gradient(90deg, #7F5AF0, #16161A); }
+    50% { border-image-source: linear-gradient(180deg, #7F5AF0, #16161A); }
+    75% { border-image-source: linear-gradient(270deg, #7F5AF0, #16161A); }
+    100% { border-image-source: linear-gradient(360deg, #7F5AF0, #16161A); }
 }

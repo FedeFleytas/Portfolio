@@ -15,75 +15,155 @@ header {
   text-align: center;
   color: white;
 }
-header .flexhead {
+header .flexhead .navbar {
+  display: grid;
+  gap: 25%;
+  background-color: rgba(22, 22, 26, 0.3176470588);
+  margin: 0 50px;
+  border-radius: 20px;
+  height: 12vh;
+  position: relative;
+  top: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left right";
+}
+header .flexhead .navbar .leftcont {
+  display: flex;
+  flex-direction: row;
+  grid-area: left;
+  justify-content: left;
+  align-items: center;
+  margin: 0 40px;
+}
+header .flexhead .navbar .leftcont .logocat {
+  height: 70px;
+  width: 70px;
+}
+header .flexhead .navbar .leftcont .portfolio {
+  font-size: 25px;
+  font-family: "arseitalic";
+}
+header .flexhead .navbar .rightcont {
+  display: flex;
+  flex-direction: row;
+  grid-area: right;
+  justify-content: right;
+  align-items: center;
+  gap: 40px;
+  margin: 0px 40px;
+}
+header .flexhead .navbar .rightcont .listacontent {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+}
+header .flexhead .navbar .rightcont .listacontent .proy-li .link-a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "arseitalic";
+  font-size: 20px;
+}
+header .flexhead .navbar .rightcont .listacontent .proy-li .link-a:hover {
+  filter: drop-shadow(0px 0px 1.9px #7f5af0);
+}
+header .flexhead .navbar .rightcont .listacontent .cont-li .link-a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "arseitalic";
+  font-size: 20px;
+}
+header .flexhead .navbar .rightcont .listacontent .cont-li .link-a:hover {
+  filter: drop-shadow(0px 0px 1.9px #7f5af0);
+}
+header .flexhead .navbar .rightcont .listacontent .skill-li .link-a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "arseitalic";
+  font-size: 20px;
+}
+header .flexhead .navbar .rightcont .listacontent .skill-li .link-a:hover {
+  filter: drop-shadow(0px 0px 1.9px #7f5af0);
+}
+header .flexhead .navbar .rightcont .linkgh:hover {
+  filter: drop-shadow(0px 0px 1.9px #7f5af0);
+}
+header .flexhead .navbar .rightcont .linkgh .ghlogo {
+  height: 50px;
+  width: 50px;
+}
+header .flexhead .headcontainer {
   padding: 150px;
 }
-header .flexhead .mainMess {
+header .flexhead .headcontainer .mainMess {
   padding-bottom: 50px;
   font-family: "arsregular";
   font-size: 20px;
 }
-header .flexhead .mainMess .welcome {
+header .flexhead .headcontainer .mainMess .welcome {
   padding-right: 120px;
 }
-header .flexhead .mainMess .welcome .twof {
+header .flexhead .headcontainer .mainMess .welcome .twof {
   font-family: "arseitalic";
   color: #7F5AF0;
   font-size: 45px;
   font-style: oblique;
 }
-header .flexhead .mainMess .front {
+header .flexhead .headcontainer .mainMess .front {
   padding-left: 120px;
   font-family: "arseitalic";
   font-size: 25px;
   padding-bottom: 30px;
 }
-header .flexhead .mainMess .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .flexhead .headcontainer .info {
+  background-color: rgba(0, 0, 0, 0.1568627451);
+  margin: 10px 300px 10px 300px;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(0deg, red, blue);
+  animation: borderMove 5s infinite linear;
 }
-header .flexhead .mainMess .button .projectbutton {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+header .flexhead .headcontainer .info .about {
   font-family: "arseitalic";
-  background-color: #7F5AF0;
-  border: 1px solid #16161A;
-  border-radius: 5px;
-  width: 100px;
-  transition: 3s;
 }
-header .flexhead .mainMess .button .projectbutton:hover {
-  background-color: #16161A;
-  border: 1px solid #7F5AF0;
+header .flexhead .headcontainer .info .about h2 {
   color: #ffffff;
-}
-header .flexhead .info .about {
-  font-family: "arseitalic";
-}
-header .flexhead .info .about h2 {
-  color: #7F5AF0;
   font-size: 30px;
 }
-header .flexhead .info .about .infotxt {
-  margin: 20px 30vh;
-  font-size: 20px;
-  font-family: "arseitalic";
-}
-header .flexhead .exp {
-  margin-top: 50px;
-}
-header .flexhead .exp h2 {
+header .flexhead .headcontainer .info .about h2::after {
+  content: "--";
   color: #7F5AF0;
-  font-size: 30px;
-  font-family: "arseitalic";
 }
-header .flexhead .exp .infotxt {
-  margin: 20px 30vh;
+header .flexhead .headcontainer .info .about h2::before {
+  content: "--";
+  color: #7F5AF0;
+}
+header .flexhead .headcontainer .info .about .infotxt {
+  margin: 20px 10vh;
   font-size: 20px;
   font-family: "arseitalic";
+  text-align: center;
 }
 
+@keyframes borderMove {
+  0% {
+    border-image-source: linear-gradient(0deg, #7F5AF0, #16161A);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, #7F5AF0, #16161A);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #7F5AF0, #16161A);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, #7F5AF0, #16161A);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, #7F5AF0, #16161A);
+  }
+}
 * {
   margin: 0;
 }
@@ -161,6 +241,10 @@ footer .contact .mia {
   grid-area: mia;
   height: 200px;
   width: 200px;
+  filter: drop-shadow(0px 0px 1.9px rgba(255, 255, 255, 0.6705882353));
+}
+footer .contact .mia:hover {
+  filter: drop-shadow(0px 0px 1.9px #7f5af0);
 }
 
 main {
@@ -214,8 +298,9 @@ main .project .pages .page:nth-child(even) .name {
 main .project .pages .page:nth-child(even) .info {
   grid-area: desc;
   text-align: right;
-  margin: 0 0 0 250px;
+  margin: 0 0 0 100px;
   font-size: 18px;
+  height: 100%;
 }
 main .project .pages .page:nth-child(even) .urlimg {
   grid-area: foto;
@@ -228,8 +313,14 @@ main .project .pages .page:nth-child(even) .urlimg .img-page {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 main .project .pages .page:nth-child(even) .urlimg .img-page:hover {
-  transform: translateY(-10px) scale(1.4);
+  transform: translateY(-10px) scale(1.6);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 0px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(0deg, red, blue);
+  animation: borderMove 5s infinite linear;
 }
 main .project .pages .page:nth-child(even) .langcont {
   display: flex;
@@ -259,22 +350,32 @@ main .project .pages .page .name::before {
 main .project .pages .page .info {
   grid-area: desc;
   text-align: left;
-  margin: 0 200px 0 0;
+  margin: 0 100px 0 0;
   font-size: 18px;
 }
 main .project .pages .page .urlimg {
   grid-area: foto;
+  height: 80%;
 }
 main .project .pages .page .urlimg .img-page {
   width: 100%;
   height: auto;
   border-radius: 5px;
   box-shadow: 6px 8px 4px #16161A;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(0deg, red, blue);
+  animation: borderMove 5s infinite linear;
 }
 main .project .pages .page .urlimg .img-page:hover {
-  transform: translateY(-10px) scale(1.4);
+  transform: translateY(-10px) scale(1.6);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 0px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(0deg, red, blue);
+  animation: borderMove 5s infinite linear;
 }
 main .project .pages .page .langcont {
   display: flex;
@@ -330,6 +431,24 @@ main .skillscont .logos .skillcont .imgskill {
 main .skillscont .logos .skillcont p {
   font-family: "arseitalic";
   font-size: 20px;
+}
+
+@keyframes borderMove {
+  0% {
+    border-image-source: linear-gradient(0deg, #7F5AF0, #16161A);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, #7F5AF0, #16161A);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #7F5AF0, #16161A);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, #7F5AF0, #16161A);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, #7F5AF0, #16161A);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
