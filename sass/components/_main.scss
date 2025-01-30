@@ -1,0 +1,86 @@
+@use "../base/variables";
+
+main {
+    margin: 10px 250px;
+    .project {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 200px;
+
+        .separate{
+            border: 1px solid #7F5AF0;
+            margin-bottom: 40px;
+            width: 500px;
+        }
+
+        h2{
+            font-size: 30px;
+            font-family: variables.$italic;
+        }
+
+        .pages {
+            font-family: variables.$italic;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .page {
+                margin: 50px 0;
+                display: grid;
+                grid-template-rows: 80px;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "titulo titulo foto"
+                "desc desc foto";
+                font-family: variables.$italic;
+                &:nth-child(even){
+                    grid-template-areas: 
+                    "foto titulo titulo"
+                    "foto desc desc";
+                    .name {
+                        grid-area: titulo;
+                        text-align: right;
+                        
+                    }
+                    .info {
+                        grid-area: desc;
+                        text-align: right;
+                        margin: 0 0 0 150px;
+    
+                    }
+                    .urlimg {
+                        grid-area: foto;
+                        .img-page {
+                            width: 100%;
+                            height: auto;
+                            box-shadow: -6px 8px 4px #16161A;
+                        }
+                    }
+                }
+                .name {
+                    grid-area: titulo;
+                    text-align: left;
+                    
+                }
+                .info {
+                    grid-area: desc;
+                    text-align: left;
+                    margin: 0 150px 0 0;
+
+                }
+                .urlimg {
+                    grid-area: foto;
+                    .img-page {
+                        width: 100%;
+                        height: auto;
+                        box-shadow: 6px 8px 4px #16161A;
+                    }
+                }
+            }
+        }
+    }
+}

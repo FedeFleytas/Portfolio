@@ -2,6 +2,7 @@
 
 header {
     background: linear-gradient(16deg, #16161A 30%, #3e3164 70%);
+    box-shadow: 0px 0px 40px 40px #16161a;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,6 +49,7 @@ header {
         .info {
             .about {
                 font-family: variables.$italic;
+
                 h2 {
                 color: #7F5AF0;
                 font-size: 30px;

@@ -14,9 +14,9 @@ const innerpagesHTML = () => {
             newPage.classList.add('page');
             newPage.dataset.id= dataPage.id;
             newPage.innerHTML=`
-                <h3>${page.name}</h3>
-                <p>${page.info}</p>
-                <img src="${page.imgPage}" alt="Captura de mi primera pagina" class="img-page" width=10px height=10px>
+                <h3 class="name">${page.name}</h3>
+                <p class="info">${page.info}</p>
+                <a href="${page.url}" class="urlimg"><img src="${page.imgPage}" alt="Captura de mi primera pagina" class="img-page"><a>
             `;
             innerPages.appendChild(newPage);
 

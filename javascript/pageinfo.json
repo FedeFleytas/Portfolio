@@ -3,6 +3,21 @@
         "id": 1,
         "name": "TECHFORGE",
         "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
-        "imgPage": "image/techforge.png"
+        "imgPage": "image/techforge.png",
+        "url": "https://techforge.vercel.app/index.html"
+    },
+    {
+        "id": 2,
+        "name": "TECHFORGE",
+        "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
+        "imgPage": "image/techforge.png",
+        "url": "https://techforge.vercel.app/index.html"
+    },
+    {
+        "id": 2,
+        "name": "TECHFORGE",
+        "info": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
+        "imgPage": "image/techforge.png",
+        "url": "https://techforge.vercel.app/index.html"
     }
 ]

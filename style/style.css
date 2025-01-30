@@ -8,6 +8,7 @@
 }
 header {
   background: linear-gradient(16deg, #16161A 30%, #3e3164 70%);
+  box-shadow: 0px 0px 40px 40px #16161a;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -80,6 +81,91 @@ header .flexhead .exp .infotxt {
 
 * {
   margin: 0;
+}
+* body {
+  background-color: #242629;
+  color: white;
+}
+
+html::-webkit-scrollbar {
+  background: #16161A;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgba(127, 90, 240, 0.2431372549);
+  border-radius: 10px;
+}
+
+main {
+  margin: 10px 250px;
+}
+main .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 200px;
+}
+main .project .separate {
+  border: 1px solid #7F5AF0;
+  margin-bottom: 40px;
+  width: 500px;
+}
+main .project h2 {
+  font-size: 30px;
+  font-family: "arseitalic";
+}
+main .project .pages {
+  font-family: "arseitalic";
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .project .pages .page {
+  margin: 50px 0;
+  display: grid;
+  grid-template-rows: 80px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "titulo titulo foto" "desc desc foto";
+  font-family: "arseitalic";
+}
+main .project .pages .page:nth-child(even) {
+  grid-template-areas: "foto titulo titulo" "foto desc desc";
+}
+main .project .pages .page:nth-child(even) .name {
+  grid-area: titulo;
+  text-align: right;
+}
+main .project .pages .page:nth-child(even) .info {
+  grid-area: desc;
+  text-align: right;
+  margin: 0 0 0 150px;
+}
+main .project .pages .page:nth-child(even) .urlimg {
+  grid-area: foto;
+}
+main .project .pages .page:nth-child(even) .urlimg .img-page {
+  width: 100%;
+  height: auto;
+  box-shadow: -6px 8px 4px #16161A;
+}
+main .project .pages .page .name {
+  grid-area: titulo;
+  text-align: left;
+}
+main .project .pages .page .info {
+  grid-area: desc;
+  text-align: left;
+  margin: 0 150px 0 0;
+}
+main .project .pages .page .urlimg {
+  grid-area: foto;
+}
+main .project .pages .page .urlimg .img-page {
+  width: 100%;
+  height: auto;
+  box-shadow: 6px 8px 4px #16161A;
 }
 
 /*# sourceMappingURL=style.css.map */
