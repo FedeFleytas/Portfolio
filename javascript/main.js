@@ -74,3 +74,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const right = document.querySelector("#rightcont");
+const abrir = document.querySelector("#abrirMenu");
+const cerrar = document.querySelector("#cerrarMenu");
+const lista = document.querySelector("#listacontent")
+
+abrir.addEventListener("click", () => {
+    right.classList.add("rightVisible")
+});
+
+cerrar.addEventListener("click", () => {
+    right.classList.remove("rightVisible")
+});
+
+abrir.addEventListener("click", () => {
+    abrir.classList.add("abrirHide")
+});
+
+cerrar.addEventListener("click", () => {
+    abrir.classList.remove("abrirHide")
+});
+
+lista.addEventListener("click", () => {
+    right.classList.remove("rightVisible")
+})
+
+lista.addEventListener("click", () => {
+    abrir.classList.remove("abrirHide")
+});

@@ -16,17 +16,14 @@ header {
   color: white;
 }
 header .flexhead .navbar {
-  display: grid;
-  gap: 25%;
+  display: flex;
   background-color: rgba(22, 22, 26, 0.3176470588);
-  margin: 0 50px;
+  margin: 0 50px 0 50px;
   border-radius: 20px;
   height: 12vh;
   position: relative;
+  justify-content: space-between;
   top: 30px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left right";
 }
 header .flexhead .navbar .leftcont {
   display: flex;
@@ -34,7 +31,8 @@ header .flexhead .navbar .leftcont {
   grid-area: left;
   justify-content: left;
   align-items: center;
-  margin: 0 40px;
+  gap: 10px;
+  margin-left: 20px;
 }
 header .flexhead .navbar .leftcont .logocat {
   height: 70px;
@@ -51,13 +49,50 @@ header .flexhead .navbar .rightcont {
   justify-content: right;
   align-items: center;
   gap: 40px;
-  margin: 0px 40px;
+  margin-right: 20px;
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .rightcont {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    gap: 3rem;
+    top: 0;
+    right: 0;
+    background-color: #231c36;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+}
+header .flexhead .navbar .rightcont .cerrarMenu {
+  display: none;
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .rightcont .cerrarMenu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 1.9px #7f5af0);
+  }
 }
 header .flexhead .navbar .rightcont .listacontent {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 20px;
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .rightcont .listacontent {
+    flex-direction: column;
+    align-items: right;
+    gap: 2rem;
+  }
 }
 header .flexhead .navbar .rightcont .listacontent .proy-li .link-a {
   color: #ffffff;
@@ -93,13 +128,50 @@ header .flexhead .navbar .rightcont .linkgh .ghlogo {
   height: 50px;
   width: 50px;
 }
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .rightVisible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+header .flexhead .navbar .abrirMenu {
+  display: none;
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .abrirMenu {
+    display: block;
+    padding-left: 25px;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 0.5px #7f5af0);
+    rotate: 180deg;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  header .flexhead .navbar .abrirHide {
+    display: none;
+  }
+}
 header .flexhead .headcontainer {
   padding: 150px;
+}
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer {
+    padding: 100px;
+  }
 }
 header .flexhead .headcontainer .mainMess {
   padding-bottom: 50px;
   font-family: "arsregular";
   font-size: 20px;
+}
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer .mainMess {
+    font-size: 15px;
+  }
 }
 header .flexhead .headcontainer .mainMess .welcome {
   padding-right: 120px;
@@ -110,22 +182,53 @@ header .flexhead .headcontainer .mainMess .welcome .twof {
   font-size: 45px;
   font-style: oblique;
 }
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer .mainMess .welcome .twof {
+    font-size: 30px;
+  }
+}
 header .flexhead .headcontainer .mainMess .front {
   padding-left: 120px;
   font-family: "arseitalic";
   font-size: 25px;
   padding-bottom: 30px;
 }
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer .mainMess .front {
+    font-size: 20px;
+  }
+}
 header .flexhead .headcontainer .info {
   background-color: rgba(0, 0, 0, 0.1568627451);
-  margin: 10px 300px 10px 300px;
-  padding: 10px 0;
+  margin: 0 300px;
+  padding: auto;
   border: 1px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(0deg, red, blue);
   animation: borderMove 5s infinite linear;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  header .flexhead .headcontainer .info {
+    margin: 0 200px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  header .flexhead .headcontainer .info {
+    margin: 0 100px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  header .flexhead .headcontainer .info {
+    margin: 0 50px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer .info {
+    margin: 0;
+  }
+}
 header .flexhead .headcontainer .info .about {
+  margin-top: 20px;
   font-family: "arseitalic";
 }
 header .flexhead .headcontainer .info .about h2 {
@@ -141,10 +244,15 @@ header .flexhead .headcontainer .info .about h2::before {
   color: #7F5AF0;
 }
 header .flexhead .headcontainer .info .about .infotxt {
-  margin: 20px 10vh;
+  margin: 20px 5vh;
   font-size: 20px;
   font-family: "arseitalic";
   text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  header .flexhead .headcontainer .info .about .infotxt {
+    margin: 20px 5vh;
+  }
 }
 
 @keyframes borderMove {
@@ -209,6 +317,9 @@ footer .contact .ig {
   flex-direction: row;
   gap: 10px;
 }
+footer .contact .ig:hover {
+  filter: drop-shadow(0px 0px 5px #7f5af0);
+}
 footer .contact .ig .imglogo {
   height: 40px;
   width: 40px;
@@ -221,6 +332,9 @@ footer .contact .link {
   flex-direction: row-reverse;
   gap: 10px;
 }
+footer .contact .link:hover {
+  filter: drop-shadow(0px 0px 5px #7f5af0);
+}
 footer .contact .link .imglogo {
   height: 50px;
   width: 50px;
@@ -232,6 +346,9 @@ footer .contact .mail {
   align-items: center;
   flex-direction: row;
   gap: 10px;
+}
+footer .contact .mail:hover {
+  filter: drop-shadow(0px 0px 5px #7f5af0);
 }
 footer .contact .mail .imglogo {
   height: 50px;
@@ -282,6 +399,7 @@ main .project .pages {
 main .project .pages .page {
   margin: 50px;
   display: grid;
+  margin-bottom: 100px;
   grid-template-rows: 50px 60px 80px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "titulo titulo foto" "desc desc foto" "leng leng foto";
@@ -411,10 +529,10 @@ main .skillscont .skills {
   margin-bottom: 50px;
 }
 main .skillscont .logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "html css sass" "js react git";
   gap: 70px;
 }
 main .skillscont .logos .skillcont {
@@ -427,6 +545,9 @@ main .skillscont .logos .skillcont {
 main .skillscont .logos .skillcont .imgskill {
   height: 50px;
   width: 50px;
+}
+main .skillscont .logos .skillcont .imgskill:hover {
+  filter: drop-shadow(0px 0px 5px #7f5af0);
 }
 main .skillscont .logos .skillcont p {
   font-family: "arseitalic";
