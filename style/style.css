@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/wallpaperflare.com_wallpapers.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container-p {
+    position: relative;
+    height: 90%;
+    width: 55%;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid white;
+    color: white;
+}
+
+.container-p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/lands.jpeg);
+    background-size: contain;
+    background-repeat: round;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+.container-p > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "video video"
+    "profile spaces"
+    "contact spaces"
+    "contact spaces"
+    "interest spaces"
+    "interest spaces";
+}
+
+.gif {
+    grid-area: video;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.gif img {
+    width: 100%;
+}
+
+.profile {
+    grid-area: profile;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.tittleName{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
+}
+
+
+.picDesc {
+    display: flex;
+}
+
+.pik {
+    margin: 15px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+}
+
+.onlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.onlineContainer p {
+    margin: 0 !important;
+}
+
+.online {
+    height: 15px;
+    width: 15px;
+}
+
+
+.space {
+    grid-area: spaces;
+    border: 3px solid white;
+    margin: 12px;
+}
+
+.tittleSpace {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
+    border-bottom: 3px solid white;
+}
+
+.contact {
+    grid-area: contact;
+    border: 3px solid white;
+    margin: 12px;
+}
+
+.tittleContact {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
+}
+
+.interest {
+    grid-area: interest;
+    border: 3px solid white;
+    margin: 12px;
+}
+
+.tittleInterest {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
+}
+
+
+
+
+
+h1 {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+
+
+
+
+
