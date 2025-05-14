@@ -1,3 +1,11 @@
+/* fonts */
+
+@font-face {
+    font-family: 'kon';
+    src: url(../fonts/KonkhmerSleokchher-Regular.ttf) format('truetype');
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +23,7 @@ body {
 .container-p {
     position: relative;
     height: 90%;
-    width: 55%;
+    width: 65%;
     margin: 100px 0;
     display: flex;
     justify-content: center;
@@ -35,7 +43,7 @@ body {
     background-image: url(../img/lands.jpeg);
     background-size: contain;
     background-repeat: round;
-    filter: brightness(60%);
+    filter: brightness(30%);
     z-index: -1;
 }
 
@@ -48,14 +56,13 @@ body {
 .gridContainer {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
+    /*screen grid-template 1fr 1fr*/
     grid-template-rows: auto;
     grid-template-areas: 
     "video video"
     "profile spaces"
     "contact spaces"
-    "contact spaces"
     "interest spaces"
-    "interest spaces";
 }
 
 .gif {
@@ -70,6 +77,8 @@ body {
 .gif img {
     width: 100%;
 }
+
+/* profile style */
 
 .profile {
     grid-area: profile;
@@ -93,6 +102,15 @@ body {
     display: flex;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+    .picDesc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .pik {
     margin: 15px;
     height: 150px;
@@ -107,7 +125,9 @@ body {
     flex-direction: column;
     text-align: center;
     width: 150px;
+    gap: 20px;
 }
+
 
 .onlineContainer {
     display: flex;
@@ -124,8 +144,10 @@ body {
 .online {
     height: 15px;
     width: 15px;
+    filter: saturate(20);
 }
 
+/* my space style */
 
 .space {
     grid-area: spaces;
@@ -142,10 +164,13 @@ body {
     border-bottom: 3px solid white;
 }
 
+/* Contact style */
+
 .contact {
     grid-area: contact;
     border: 3px solid white;
     margin: 12px;
+    display: inline;
 }
 
 .tittleContact {
@@ -155,6 +180,41 @@ body {
     background: #000000;
     background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
 }
+
+.redesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+    .redesContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.redContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    text-align: left;
+    margin: 10px;
+    color: white;
+}
+
+.redContainer p {
+    font-size: 14px;
+}
+
+.redes {
+    margin-right: 10px;
+}
+
+
+
+/* Interest style */
 
 .interest {
     grid-area: interest;
@@ -179,6 +239,9 @@ h1 {
     font-size: 22px;
 }
 
+p {
+    margin: 0;
+}
 
 
 
