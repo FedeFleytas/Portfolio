@@ -74,6 +74,17 @@ body {
     align-items: top;
 }
 
+@media only screen and (min-width: 1920px){
+    .gif {
+    grid-area: video;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    }
+}
+
 .gif img {
     width: 100%;
 }
@@ -164,6 +175,31 @@ body {
     border-bottom: 3px solid white;
 }
 
+.aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
 /* Contact style */
 
 .contact {
@@ -230,6 +266,13 @@ body {
     background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
 }
 
+.interestxt {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 10px;
+}
 
 
 
