@@ -275,6 +275,28 @@ body {
 }
 
 
+.pc {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.specItems::before {
+    content: "✨";      /* Podés usar cualquier símbolo o emoji */
+    color: #ffffff;
+    margin-right: 0.5em;
+}
+
 
 
 h1 {
@@ -287,6 +309,16 @@ p {
 }
 
 
+hr {
+    border: 0;
+    padding: 0;
+    margin: 10px;
+}
 
+b {
+    display: inline;
+}
 
-
+.tittleB {
+    margin-bottom: 10px;
+}
