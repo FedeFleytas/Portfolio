@@ -9,11 +9,12 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     background-image: url(../img/wallpaperflare.com_wallpapers.jpg);
-    background-size: cover;
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,6 +275,14 @@ body {
     margin: 10px;
 }
 
+.games::before {
+        content: "🕹";
+}
+
+.anime::before {
+        content: "🏮";
+}
+
 
 .pc {
     display: flex;
@@ -292,9 +301,7 @@ body {
 }
 
 .specItems::before {
-    content: "✨";      /* Podés usar cualquier símbolo o emoji */
-    color: #ffffff;
-    margin-right: 0.5em;
+    content: "🖥";
 }
 
 
@@ -321,4 +328,17 @@ b {
 
 .tittleB {
     margin-bottom: 10px;
+}
+
+.tittleB::before {
+    content: "🔻";
+
+}
+
+.tittleC {
+    margin: 20px 0 15px 0;
+}
+
+.tittleC::before {
+    content: "🔻";
 }
