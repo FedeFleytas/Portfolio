@@ -57,13 +57,30 @@ body {
 .gridContainer {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    /*screen grid-template 1fr 1fr*/
     grid-template-rows: auto;
     grid-template-areas: 
     "video video"
     "profile spaces"
     "contact spaces"
     "interest spaces"
+}
+
+@media only screen and (min-width: 630px) and (max-width: 820) {
+    .gridContainer {
+        grid-template-columns: 0.1fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "video"
+        "profile"
+        "spaces"
+        "contact"
+        "interest";
+    }
 }
 
 .gif {
@@ -192,14 +209,6 @@ body {
     margin: 10px;
 }
 
-.skills{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    margin: 10px;
-}
-
 
 /* Contact style */
 
@@ -225,7 +234,19 @@ body {
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
+    .redesContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .redesContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 430px) {
     .redesContainer {
         grid-template-columns: 1fr;
     }
@@ -241,6 +262,14 @@ body {
     color: white;
 }
 
+@media only screen and (max-width: 630px) {
+    .redContainer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
 .redContainer p {
     font-size: 14px;
 }
@@ -249,17 +278,23 @@ body {
     margin-right: 10px;
 }
 
+@media only screen and (max-width: 630px) {
+    .redes {
+        margin: 0 0 10px 0;
+    }
+}
+
 
 
 /* Interest style */
 
-.interest {
+.containerSkills {
     grid-area: interest;
     border: 3px solid white;
     margin: 12px;
 }
 
-.tittleInterest {
+.tittleSkills {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -267,41 +302,40 @@ body {
     background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
 }
 
-.interestxt {
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+@media only screen and (min-width: 630px) and (max-width: 850px) {
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.skillImage {
     display: flex;
     justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    margin: 10px;
+    align-items: center;
 }
 
-.games::before {
-        content: "🕹";
-}
-
-.anime::before {
-        content: "🏮";
-}
-
-
-.pc {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    margin: 10px;
-}
-
-.specs {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.specItems::before {
-    content: "🖥";
+.skillImage img{
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -333,12 +367,4 @@ b {
 .tittleB::before {
     content: "🔻";
 
-}
-
-.tittleC {
-    margin: 20px 0 15px 0;
-}
-
-.tittleC::before {
-    content: "🔻";
 }
