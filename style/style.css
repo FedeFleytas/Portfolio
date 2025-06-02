@@ -31,6 +31,7 @@ body {
     align-items: center;
     flex-direction: column;
     border: 3px solid white;
+    border-radius: 5px;
     color: white;
 }
 
@@ -152,6 +153,9 @@ body {
     height: 150px;
     width: 150px;
     border: 2px solid black;
+    border-radius: 5px;
+
+
 }
 
 .description {
@@ -162,6 +166,23 @@ body {
     text-align: center;
     width: 150px;
     gap: 20px;
+}
+
+.front {
+    min-height: 1.5em;
+    display: inline-block;
+}
+
+.front::after {
+    content: '|';
+    vertical-align: bottom;
+    color: white;
+    animation: blink-line 0.75s step-end infinite;
+    opacity: 0;
+}
+
+.front .typefinish::after {
+    opacity: 1;
 }
 
 
@@ -175,12 +196,14 @@ body {
 
 .onlineContainer p {
     margin: 0 !important;
+    
 }
 
 .online {
     height: 15px;
     width: 15px;
     filter: saturate(20);
+    animation: pulso 2s infinite;
 }
 
 /* my space style */
@@ -188,6 +211,7 @@ body {
 .space {
     grid-area: spaces;
     border: 3px solid white;
+    border-radius: 5px;
     margin: 12px;
 }
 
@@ -199,6 +223,20 @@ body {
     background: linear-gradient(0deg,rgba(0, 0, 0, 1) 60%, rgba(112, 112, 112, 1) 100%);
     border-bottom: 3px solid white;
 }
+
+.tittleB {
+    margin-bottom: 10px;
+}
+
+.aboutTittle{
+    display: flex;
+}
+
+.aboutTittle p {
+    position: relative;
+    animation: fly 5s infinite alternate ease-in-out;
+}
+
 
 .aboutMe {
     display: flex;
@@ -222,6 +260,7 @@ body {
 .contact {
     grid-area: contact;
     border: 3px solid white;
+    border-radius: 5px;
     margin: 12px;
     display: inline;
 }
@@ -238,8 +277,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
 }
+
 
 @media only screen and (max-width: 1000px) {
     .redesContainer {
@@ -268,6 +307,10 @@ body {
     text-align: left;
     margin: 10px;
     color: white;
+}
+
+.redContainer:hover {
+    filter: drop-shadow(0px 0px 10px rgb(0, 146, 169));
 }
 
 @media only screen and (max-width: 630px) {
@@ -299,6 +342,7 @@ body {
 .containerSkills {
     grid-area: interest;
     border: 3px solid white;
+    border-radius: 5px;
     margin: 12px;
 }
 
@@ -314,10 +358,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+    gap: 30px 0;
+    margin: 30px;
 }
 
 @media only screen and (min-width: 630px) and (max-width: 1000px) {
@@ -332,10 +374,6 @@ body {
     }
 }
 
-
-
-
-
 .skillImage {
     display: flex;
     justify-content: center;
@@ -345,8 +383,15 @@ body {
 .skillImage img{
     height: 50px;
     width: 50px;
+
 }
 
+.skillImage img:hover {
+    filter: drop-shadow(0 0 10px rgb(0, 146, 169));
+}
+
+
+/* generales */
 
 
 h1 {
@@ -369,11 +414,40 @@ b {
     display: inline;
 }
 
-.tittleB {
-    margin-bottom: 10px;
+
+/* kayframes */
+
+
+@keyframes pulso {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.tittleB::before {
-    content: "🔻";
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+
+
+@keyframes blink-line {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
