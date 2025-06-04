@@ -1,9 +1,18 @@
 /* fonts */
 
 @font-face {
-    font-family: 'kon';
-    src: url(../fonts/KonkhmerSleokchher-Regular.ttf) format('truetype');
+    font-family: 'inter-reg';
+    src: url(../fonts/Inter_18pt-Regular.ttf) format('truetype');
+}
 
+@font-face {
+    font-family: 'montserrat';
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'sans-reg';
+    src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 * {
@@ -254,6 +263,55 @@ body {
     margin: 10px;
 }
 
+.gallery {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.page:hover{
+    border: 2px solid red;
+}
+
+.langcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.langcont P {
+    background-color: rgba(0, 0, 0, 0.685);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 100px;
+    border-radius: 20px;
+}
+
+#foto {
+}
+
+.none {
+    height: 0;
+    width: 0;
+}
+
+.active {
+    height: 150px;
+    width: 200px;
+    position: absolute;
+}
+
 
 /* Contact style */
 
@@ -395,23 +453,26 @@ body {
 
 
 h1 {
-    margin-left: 10px;
+    margin: 5px 0 5px 10px;
     font-size: 22px;
+    font-family: montserrat;
 }
 
 p {
     margin: 0;
+    font-family: inter-reg;
 }
 
 
 hr {
     border: 0;
     padding: 0;
-    margin: 10px;
+    margin: 5px;
 }
 
 b {
     display: inline;
+    font-family: sans-reg;
 }
 
 
@@ -444,7 +505,6 @@ b {
         transform: translateY(0);
     }
 }
-
 
 
 @keyframes blink-line {
