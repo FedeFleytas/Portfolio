@@ -33,7 +33,7 @@ body {
 .container-p {
     position: relative;
     height: 90%;
-    width: 80%;
+    width: 70%;
     margin: 100px 0;
     display: flex;
     justify-content: center;
@@ -265,21 +265,33 @@ body {
 
 .gallery {
     display: flex;
-    justify-content: left;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 20px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px 0;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    flex-basis: calc((100% - (2 * 20px)) / 3);
+    max-width: calc((100% - (2 * 20px)) / 3);
+    min-width: 280px;
 }
 
-.page:hover{
-    border: 2px solid red;
+.pageIn {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.pageName {
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: center;
 }
 
 .langcont {
@@ -296,22 +308,34 @@ body {
     height: auto;
     width: 100px;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
-#foto {
+.pageImg {
+    height: auto;
+    width: 250px;
+}
+
+.morecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.more {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.685);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .none {
-    height: 0;
-    width: 0;
+    display: none;
 }
-
-.active {
-    height: 150px;
-    width: 200px;
-    position: absolute;
-}
-
 
 /* Contact style */
 

@@ -25,7 +25,7 @@
     {
         "id": 3,
         "img": "../img/pagesImg/technow.png",
-        "tittle": "Technow E-commerce",
+        "tittle": "Technow",
         "url": "https://entrega-react-nine.vercel.app",
         "desc": "Pagina de mi tercer curso de coderhouse en la que agragamos el uso de api externa para cargar y enviar la compra con ids diferentes",
         "lang": "html",

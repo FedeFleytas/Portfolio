@@ -15,35 +15,37 @@ const innerpagesHTML = () => {
             newPage.classList.add('page');
             newPage.dataset.id = dataPage.id;
             newPage.innerHTML = `
-            <div>
+            <div class="pageIn">
                 <h2 class="pageName">${page.tittle}</h2>
-                <div class="langcont">
+                <div class="langcont none">
                     ${page.lang ? `<p> ${page.lang}  </p>` : ""}
                     ${page.lang2 ? `<p> ${page.lang2}  </p>` : ""}
                     ${page.lang3 ? `<p> ${page.lang3}  </p>` : ""}
                     ${page.lang4 ? `<p> ${page.lang4}  </p>` : ""}
                     ${page.lang5 ? `<p> ${page.lang5}  </p>` : ""}
                 </div>
+                <a href="${page.url}" class="pageUrl"> <img src="${page.img}" class="pageImg" id="foto"> <a>
+                <div class="morecontainer">
+                    <p class="more"> more </p>
+                </div>
             </div>
-            <a href="${page.url}" class="pageUrl"> <img src="${page.img}" class="pageImg none" id="foto"> <a>
             `;
 
-            const imagenDentroDePage = newPage.querySelector('.pageImg'); // o '#foto' si sabes que el ID es único
+            // const imagenDentroDePage = newPage.querySelector('.pageImg');
 
-            // 2. Verifica que la imagen exista dentro de este 'newPage'
-            if (imagenDentroDePage) {
-                newPage.addEventListener('mouseover', () => {
-                    imagenDentroDePage.classList.add('active');
-                    imagenDentroDePage.classList.remove('none'); // Si 'none' la oculta/reducía
-                });
+            // if (imagenDentroDePage) {
+            //     newPage.addEventListener('mouseover', () => {
+            //         imagenDentroDePage.classList.add('active');
+            //         imagenDentroDePage.classList.remove('none');
+            //     });
 
-                newPage.addEventListener('mouseout', () => {
-                    imagenDentroDePage.classList.remove('active');
-                    imagenDentroDePage.classList.add('none'); // Vuelve al estado 'none'
-                });
-            } else {
-                console.warn(`Advertencia: No se encontró la imagen dentro del elemento con título "${page.tittle}".`);
-            }
+            //     newPage.addEventListener('mouseout', () => {
+            //         imagenDentroDePage.classList.remove('active');
+            //         imagenDentroDePage.classList.add('none');
+            //     });
+            // } else {
+            //     console.warn(`Advertencia: No se encontró la imagen dentro del elemento con título "${page.tittle}".`);
+            // }
 
             innerPages.appendChild(newPage)
         })
