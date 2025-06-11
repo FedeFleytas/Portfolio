@@ -23,7 +23,7 @@
 
 body {
     background-image: url(../img/wallpaperflare.com_wallpapers.jpg);
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,14 +159,17 @@ body {
     }
 }
 
+.pikContainer {
+    background: url(https://i.gifer.com/XZ5V.gif) center/cover no-repeat;
+}
+
 .pik {
     margin: 15px;
     height: 150px;
     width: 150px;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
-
-
+    animation: lines 5s infinite alternate, bright 5s infinite alternate;
 }
 
 .description {
@@ -306,7 +309,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 430px) {
+@media only screen and (min-width: 320px) and (max-width: 550px) {
     .redesContainer {
         grid-template-columns: 1fr 1fr;
     }
@@ -565,4 +568,9 @@ b {
 @keyframes lines {
     0% { border-color: #000000; }
     100% { border-color: #707070; }
+}
+
+@keyframes bright {
+    0%{ filter: drop-shadow(0px 0px 10px rgb(255, 255, 255)); }
+    100% { filter: drop-shadow(0px 0px 10px rgba(119, 219, 255, 0.601)); }
 }
