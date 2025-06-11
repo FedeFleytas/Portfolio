@@ -17,16 +17,13 @@ const innerpagesHTML = () => {
             newPage.innerHTML = `
             <div class="pageIn">
                 <h2 class="pageName">${page.tittle}</h2>
-                <div class="langcont none">
-                    ${page.lang ? `<p> ${page.lang}  </p>` : ""}
-                    ${page.lang2 ? `<p> ${page.lang2}  </p>` : ""}
-                    ${page.lang3 ? `<p> ${page.lang3}  </p>` : ""}
-                    ${page.lang4 ? `<p> ${page.lang4}  </p>` : ""}
-                    ${page.lang5 ? `<p> ${page.lang5}  </p>` : ""}
-                </div>
                 <a href="${page.url}" class="pageUrl"> <img src="${page.img}" class="pageImg" id="foto"> <a>
-                <div class="morecontainer">
-                    <p class="more"> more </p>
+                <div class="langcont none">
+                    ${page.lang ? `<img src=" ${page.lang}">` : ""}
+                    ${page.lang2 ? `<img src=" ${page.lang2}">` : ""}
+                    ${page.lang3 ? `<img src=" ${page.lang3}">` : ""}
+                    ${page.lang4 ? `<img src=" ${page.lang4}">` : ""}
+                    ${page.lang5 ? `<img src=" ${page.lang5}">` : ""}
                 </div>
             </div>
             `;
