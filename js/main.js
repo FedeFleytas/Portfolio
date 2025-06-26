@@ -27,23 +27,6 @@ const innerpagesHTML = () => {
                 </div>
             </div>
             `;
-
-            // const imagenDentroDePage = newPage.querySelector('.pageImg');
-
-            // if (imagenDentroDePage) {
-            //     newPage.addEventListener('mouseover', () => {
-            //         imagenDentroDePage.classList.add('active');
-            //         imagenDentroDePage.classList.remove('none');
-            //     });
-
-            //     newPage.addEventListener('mouseout', () => {
-            //         imagenDentroDePage.classList.remove('active');
-            //         imagenDentroDePage.classList.add('none');
-            //     });
-            // } else {
-            //     console.warn(`Advertencia: No se encontró la imagen dentro del elemento con título "${page.tittle}".`);
-            // }
-
             innerPages.appendChild(newPage)
         })
     }
