@@ -257,6 +257,14 @@ body {
     display: flex;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 630px) {
+    .aboutTittle{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }   
+}
+
 .aboutTittle p {
     position: relative;
     animation: fly 5s infinite alternate ease-in-out;
@@ -269,11 +277,18 @@ body {
     align-items: left;
     flex-direction: column;
     margin: 10px;
-    font-size: 19px;
 }
 
 .txtAbout {
     font-size: 18px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 630px) {
+    .txtAbout{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }   
 }
 
 /* Contact style */
