@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Playfair';
-    src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+    src: url(../fonts/PlayfairDisplay-Medium.ttf);
 }
 
 @font-face {
-    font-family: 'sans-reg';
-    src: url(../fonts/OpenSans-Regular.ttf);
+    font-family: 'interMed';
+    src: url(../fonts/Inter_28pt-Medium.ttf);
 }
 
 * {
@@ -188,7 +188,7 @@ body {
 
 .front {
     display: inline-block;
-    font-family: 'sans-reg';
+    font-family: 'interMed';
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1250px) {
@@ -228,7 +228,7 @@ body {
     width: 15px;
     filter: saturate(20);
     animation: pulso 2s infinite;
-    font-family: 'sans-reg';
+    font-family: 'interMed';
 }
 
 /* my space style */
@@ -411,7 +411,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin: 30px 0;
-    gap: 5rem;
+    gap: 3rem;
     padding: 1rem;
 }
 
@@ -550,8 +550,8 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    border: 2px solid rgb(44, 79, 111);
-    animation: linesdl 5s infinite alternate;
+    border: 2px solid rgb(255, 255, 255);
+    animation: fly 5s infinite alternate ease-in-out;
     width: 70px;
     height: 70px;
     border-radius: 50px;
@@ -562,7 +562,7 @@ body {
     .dwloadContainer {
         border: none;
         animation: none;
-        position: sticky;
+        position: static;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -582,6 +582,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        bottom: 30px;
+        right: 30px;
     }
 }
 
@@ -623,12 +625,12 @@ h1 {
 
 h2 {
     font-size: 20px;
-    font-family: 'sans-reg';
+    font-family: 'interMed';
 }
 
 p {
     margin: 0;
-    font-family: 'sans-reg';
+    font-family: 'interMed';
 }
 
 
@@ -641,7 +643,7 @@ hr {
 b {
     display: inline;
     font-size: 20px;
-    font-family: 'sans-reg';
+    font-family: 'interMed';
 }
 
 @media only screen and (min-width: 320px) and (max-width: 630px) {
