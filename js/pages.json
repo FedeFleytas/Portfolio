@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "../img/pagesImg/techforge.png",
+        "img": "../img/pagesImg/techforge.webp",
         "tittle": "Techforge",
         "url": "https://techforge.vercel.app/index.html",
         "desc": "Una de mis primeras paginas que hice para el curso de desarrollo web, una pagina sencilla, sin funciones",
@@ -12,7 +12,7 @@
 
     {
         "id": 2,
-        "img": "../img/pagesImg/techforgev2.png",
+        "img": "../img/pagesImg/techforgev2.webp",
         "tittle": "Techforge v2",
         "url": "https://fedefleytas.github.io/Proy-js/",
         "desc": "Mi segunda pagina en mi curso de coderhouse en la que imprementamos el uso de JS para usar el carrito de compras",
@@ -24,7 +24,7 @@
 
     {
         "id": 3,
-        "img": "../img/pagesImg/technow.png",
+        "img": "../img/pagesImg/technow.webp",
         "tittle": "Technow",
         "url": "https://entrega-react-nine.vercel.app",
         "desc": "Pagina de mi tercer curso de coderhouse en la que agragamos el uso de api externa para cargar y enviar la compra con ids diferentes",
