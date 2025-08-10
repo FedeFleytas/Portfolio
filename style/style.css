@@ -117,7 +117,7 @@ body {
     }
 }
 
-.gif img {
+.gif video {
     width: 100%;
     object-fit: cover;
 }
