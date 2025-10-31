@@ -39,7 +39,7 @@
         "id": 4,
         "img": "../img/pagesImg/blacklist.png",
         "tittle": "Blacklist",
-        "url": "https://fedefleytas.github.io/Overclutch",
+        "url": "https://blacklist-oc.vercel.app",
         "desc": "Pagina de mi tercer curso de coderhouse en la que agragamos el uso de api externa para cargar y enviar la compra con ids diferentes",
         "lang": "../img/skills/html5.svg",
         "lang2": "../img/skills/css_old.svg",
